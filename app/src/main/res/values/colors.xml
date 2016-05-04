@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="settings_act_action_bar_color">#009688</color>
+    <color name="settings_act_action_bar_color_dark">#00796B</color>-->
+    <color name="settings_act_action_bar_color">#32A0BA</color><!-- 3494A0 -->
+    <color name="settings_act_action_bar_color_dark">#137888</color>
+    <color name="settings_accent_color">#3494A0</color>
+    <color name="semi_transparent">#0fffffff</color>
+    <color name="mid_transparent">#80ffffff</color>
+</resources>

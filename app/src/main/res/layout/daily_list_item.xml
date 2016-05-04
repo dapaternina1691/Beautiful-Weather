@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                tools:background="#ffaa00"
+                android:background="@color/semi_transparent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dayNameLabel"
+        android:textColor="#ffffffff"
+        android:textSize="20sp"
+        tools:text="Wednesday"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="roboto-light"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iconImageView"
+        android:src="@drawable/partly_cloudy"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minTempLabel"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        tools:text="19°"
+        android:textColor="#b3ffffff"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/maxTempLabel"
+        tools:text="25°"
+        android:textSize="28dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/minTempLabel"
+        android:layout_toStartOf="@+id/minTempLabel"
+        android:layout_marginRight="10dp"
+        android:textColor="#fff"/>
+
+</RelativeLayout>

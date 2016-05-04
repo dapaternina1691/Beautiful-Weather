@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+
+                  > <!--                  android:background="#ffffffff"-->
+    <PreferenceCategory
+                    android:title="Units"
+                    android:id="@+id/pref_key_units_settings">
+
+        <ListPreference   android:title="Temperature"
+                          android:summary="Celsius"
+                          android:id="@+id/temperatureUnitPref"
+                          android:defaultValue="Celsius"
+                          android:entries="@array/tempUnitArray"
+                          android:entryValues="@array/tempUnitArray" />
+
+        <ListPreference   android:title="Wind speed"
+                          android:summary="m/s"
+                          android:id="@+id/speedUnitPref"
+                          android:defaultValue="m/s"
+                          android:entries="@array/speedUnitArray"
+                          android:entryValues="@array/speedUnitArray"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Hour"
+        android:id="@+id/pref_key_hour_settings">
+
+        <CheckBoxPreference android:title="Use 24-hour clock"
+                            android:summary=""
+                            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="About">
+
+    <Preference
+        android:title="About"
+        android:key="@string/about_button_key"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

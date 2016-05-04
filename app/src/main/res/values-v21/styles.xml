@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="MyParentTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- EDIT HERE -->
+        <!--<item name="colorPrimary">#00ffffff</item>--> <!-- Transparent ActionBar-->
+        <item name="android:windowContentOverlay">@null</item> <!-- Remove ActionBar shadow-->
+
+        <item name="android:actionBarStyle">@style/ActionBarTheme</item>
+        <item name="android:windowActionBarOverlay">true</item>
+
+        <item name="actionBarStyle">@style/ActionBarTheme</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+    </style>
+
+    <style name="AppTheme" parent="MyParentTheme">
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="ActionBarTheme" parent="Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background">@null</item>
+        <!-- Support library compatibility -->
+        <item name="background">@null</item>
+
+        <!--<item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView</item>-->
+    </style>
+
+
+
+    <style name="SettingsActParent" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/settings_act_action_bar_color</item>
+        <item name="colorPrimaryDark">@color/settings_act_action_bar_color_dark</item>
+        <item name="colorAccent">@color/settings_accent_color</item>
+        <item name="android:windowBackground">@color/settings_act_action_bar_color</item>
+    </style>
+
+    <style name="SettingsActTheme" parent="SettingsActParent">
+
+    </style>
+
+
+</resources>

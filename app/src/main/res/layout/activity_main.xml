@@ -1,0 +1,269 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity"
+                android:background="@drawable/bg"
+                android:fitsSystemWindows="true"
+                android:clipToPadding="false"
+                android:padding="0dp"
+                android:id="@+id/relativeLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:id="@+id/temperatureLabel"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        tools:text="100"
+        android:textColor="#edffffff"
+        android:textIsSelectable="false"
+        android:textSize="150dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/degreeImageView"
+        android:layout_alignTop="@+id/temperatureLabel"
+        android:layout_marginTop="34dp"
+        android:src="@drawable/degree"
+        android:layout_toRightOf="@+id/temperatureLabel"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginRight="20dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Saturday, 8am"
+        android:text="-----, - --"
+        android:id="@+id/dayAndTimeLabel"
+        android:layout_above="@+id/degreeImageView"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="......"
+        tools:text="Los Angeles"
+        android:id="@+id/locationLabel"
+        android:textSize="26dp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"/>
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatureLabel"
+        android:weightSum="100"
+        android:id="@+id/statsLinearLayout"
+        android:layout_above="@+id/buttonsLinearLayout"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:id="@+id/humidityImage"
+                android:src="@drawable/humidity_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                tools:text="0.91"
+                android:id="@+id/humidityLabel"
+                android:textColor="#ccffffff"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/wind_icon"
+                android:id="@+id/windSpeedImage"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"
+                tools:text="36km/h"
+                android:textColor="#ccffffff"
+                android:textSize="24sp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/windSpeedText"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:id="@+id/rainChanceImage"
+                android:src="@drawable/umbrella_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                tools:text="28%"
+                android:id="@+id/rainChanceLabel"
+                android:textColor="#ccffffff"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sunny"
+        android:id="@+id/descriptionText"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/dayAndTimeLabel"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MAX"
+        android:id="@+id/maxTempLabel"
+        android:textColor="#edffffff"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_above="@+id/maxTempTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/temperatureLabel"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="100°"
+        android:id="@+id/maxTempTextView"
+        android:textColor="#edffffff"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_below="@+id/degreeImageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/temperatureLabel"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MIN"
+        android:id="@+id/minTempLabel"
+        android:textColor="#edffffff"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_above="@+id/minTempTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/temperatureLabel"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="100°"
+        android:id="@+id/minTempTextView"
+        android:textColor="#edffffff"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/temperatureLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/temperatureLabel"
+        android:layout_marginBottom="35dp"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="100"
+        android:id="@+id/buttonsLinearLayout"
+        android:visibility="invisible">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NEXT 48 HOURS"
+            android:id="@+id/next48HoursButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ccffffff"
+            android:background="#0fffffff"
+            android:layout_weight="50"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEE NEXT WEEK"
+            android:id="@+id/seeNextWeekButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ccffffff"
+            android:background="#0fffffff"
+            android:layout_weight="50"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
